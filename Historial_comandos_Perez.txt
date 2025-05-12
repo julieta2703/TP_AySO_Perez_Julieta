@@ -1,0 +1,47 @@
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+ls -l
+cd repogit
+git clone git@github.com:julieta2703/TP_AySO_Perez_Julieta.git
+cd TP_AySO_Perez_Julieta/
+pwd
+ls -l 
+cat /etc/os-release
+grep HOME_URL /etc/os-release
+grep -i home_url /etc/os-release
+grep -i Home_url /etc/os-release > datos_url.txt
+ls -l
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt
+ls -l
+git add .
+git config --global user.email "julietaperez2706@gmail.com"
+git config --global user.name "julieta2703"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuarios.txt
+git add .
+cat <<EOF >> README.md
+Alumno: JulietaPerez
+División: 115
+Turno: Mañana
+EOF
+
+git add README.md datos_usuarios.txt
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+mkdir -p {material1,material2}/uni{1..3}
+tree
+snap install
+snap install tree
+sudo snap install tree
+tree
+cat <<EOF > script_dir.sh
+#!/bin/bash
+mkdir -p ~/materia1/uni{1..3} ~/materia2/uni{1..3}
+EOF
+
+chmod +x script_dir.sh
+tree
+history -a
